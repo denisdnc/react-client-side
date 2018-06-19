@@ -1,4 +1,15 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-ReactDOM.render(<div>Olar!</div>, document.getElementById('app'))
+class Hello extends React.Component {
+
+  getMessage() {
+    return 'Olar!'
+  }
+
+  render() {
+    return <div>{this.getMessage()}</div>
+  }
+}
+
+ReactDOM.render(<Hello />, document.getElementById('app'))
